@@ -6,12 +6,12 @@ through the callback n times.
 Examples:
 
 let result1 = multiMap(7, 2, function(n) {
-  return n * 10;
+  return val * 10;
 });
 console.log(result1); // 700
 
 let result2 = multiMap(7, 3, function(n) {
-    return n * 10;
+    return val * 10;
 });
 console.log(result2); // 7000
 
@@ -22,7 +22,11 @@ console.log(result3); // hi!!!!!
 *******************************************************************************/
 
 function multiMap(val, n, cb) {
-  // Your code here 
+  // Your code here
+  for (let i = 0; i < n; i++) {
+    val = cb(val);
+  }
+  return val;
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
