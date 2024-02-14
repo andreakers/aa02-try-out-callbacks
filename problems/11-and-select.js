@@ -19,6 +19,7 @@ console.log(andSelect([-3, 8, 7, 11, 6, 12, -4], isEven, isPositive));
 let isUpperCase = function (s) {
     return s === s.toUpperCase();
 };
+--------------------------------------
 
 let startsWithA = function (s) {
     return s[0].toUpperCase() === 'A';
@@ -29,7 +30,13 @@ console.log(andSelect(['ants', 'APPLES', 'ART', 'BACON', 'arm'], isUpperCase,  s
 *******************************************************************************/
 
 function andSelect(array, cb1, cb2) {
-  // Your code here 
+ let newarr = []
+ for ( let i = 0; i < array.length; i++){
+  if (cb1(array[i])&&cb2(array[i])){
+    newarr.push(array[i])
+  }
+ }
+ return newarr;
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
